@@ -1,23 +1,7 @@
-# ionic-restful-authentication
+# Perfection Group  App
 
-Ionic Project with Token Based Restful APIs. 
+Perfection Group  App - Ionic Project with Token Based Restful APIs. 
 
-
-<table><tr>
-<td width="25%">
-Welcome page
-<img src="http://i.imgur.com/tNmu7Ce.png" width="200" alt="Ionic 3 and Angular 4 Create Welcome page with Login and Logout">
-</td>
-<td width="25%">
-Signup Page
-<img src="http://i.imgur.com/fiXCUCN.png" width="200" alt="Ionic 3 and Angular 4 Create Welcome page with Login and Logout">
-</td>
-<td width="25%">
-Home page
-<img src="http://i.imgur.com/jr6afSC.png" width="200" alt="Ionic 3 and Angular 4 Create Welcome page with Login and Logout">
-</td>
-
-</tr></table>
 
 Install Node JS Software
 
@@ -49,5 +33,12 @@ $ cordova add platform android
 $ ionic build android
 
 ```
+
+
+### Ios Download Link
+<a href="https://apps.apple.com/us/app/perfection-group/id970944625">Download From Itunes</a>
+
+### Android Download Link
+<a href="https://play.google.com/store/apps/details?id=com.perfectiongroup">Download From Google Play</a>
 
 More Info Tutorial: <a href="http://www.9lessons.info/2017/06/ionic-angular-php-login-restful-api.html">Ionic 3 and Angular 4: PHP Restful API User Authentication for Login and Signup.</a>
