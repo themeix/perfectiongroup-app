@@ -1,0 +1,78 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton="true"> <!-- If you don't need back here -->
+    <img ion-right src="assets/imgs/bananalogo.png" class="navbarLogo" />
+    <ion-buttons end>
+        <button ion-button icon-only (click)="backToWelcome()">
+            <ion-icon name="home" style="color:#1A8AD6;"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+
+  <ion-content padding class="normalize-ion">
+
+
+
+<div class="submitted" *ngIf="submitted" style="text-align: center;">
+
+
+  <ion-icon name="checkmark-circle-outline" item-left style="color: green;padding: 2px;font-size: 100px;margin: 10px;"></ion-icon>
+    
+<p>Location has been added!</p>
+
+
+</div>
+
+
+<div *ngIf="!submitted">
+    <h3 class="heading">Add New Location</h3>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Location Name</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text"  [(ngModel)]="userData.name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label fixed>Street Adress</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text"  [(ngModel)]="userData.adress1"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label fixed>Street Adress 2</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text"  [(ngModel)]="userData.adress2"></ion-input>
+  </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>City</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text"  [(ngModel)]="userData.city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>State</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="userData.state"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Zip Code</ion-label>
+      </ion-item>
+  <ion-item class="mb-10">
+     <ion-input type="text" [(ngModel)]="userData.zip"></ion-input>
+  </ion-item>
+
+    <button ion-button block color="primary" (click)="feedUpdate()" class="sign-btn btn-border bottom-main-btn mb-10">Add Location</button>
+    
+  </ion-list>
+
+</div>
+
+<button ion-button block color="secondary" (click)="goback()" class="bottom-main-btn bg-secondary btn-border">Go Back!</button>
+    
+</ion-content>
+

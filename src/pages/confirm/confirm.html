@@ -1,0 +1,48 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton="true"> <!-- If you don't need back here -->
+    <img ion-right src="assets/imgs/bananalogo.png" class="navbarLogo" />
+    <ion-buttons end>
+        <button ion-button icon-only (click)="backToWelcome()">
+            <ion-icon name="home" style="color:#1A8AD6;"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+  <ion-content padding class="normalize-ion">
+
+  <h3 class="heading">Confirm Request</h3>
+
+<div class="submitted" *ngIf="submitted" style="text-align: center;">
+<ion-icon name="checkmark-circle-outline" item-left style="color: green;padding: 2px;font-size: 100px;margin: 10px;"></ion-icon>
+<p>Request has been submitted!</p>
+</div>
+<div *ngIf="!submitted">
+   <p style='color: grey;'>You are requesting service at the following location:</p> 
+   <p class="adrs" [innerHTML]="user.locdata"> </p>
+
+ 
+
+<p style='color: grey;' >You described the issue as follows: </p>   
+<p class="adrs">{{userPostData.feed}}</p> 
+
+    <ion-item id="udpateBox">
+      <ion-row>
+
+        <button ion-button color="primary" class="bottom-main-btn" (click)="feedUpdate()" style="width:100%" *ngIf="userPostData.type==1">Confirm Request</button>
+   
+      </ion-row>
+    </ion-item>
+
+    <div *ngIf="userPostData.type==1">  
+      <div class="call-warning-text" *ngIf="close">
+        <p style="color:rgb(245, 244, 244);background-color: red;font-weight: 600;font-size: 15px;padding: 11px;text-align: center;" >
+            This Service request is being made outside of regular business hours. 
+            <br/> <br/>24 hours emergency service available. 
+            <br/> <br/> If this is an emergency, please call.If this is an emergency, call in request
+          
+        </p>  
+        <button ion-button color="primary" class="bottom-main-btn" (click)="startcall()" style="width:100%">Start Call</button>
+        </div>
+      </div>
+</div>
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header no-border>
+    <ion-navbar hideBackButton="true"> <!-- If you don't need back here -->
+      <img ion-right src="assets/imgs/bananalogo.png" class="navbarLogo" />
+      <ion-buttons end>
+          <button ion-button icon-only (click)="backToWelcome()">
+              <ion-icon name="home" style="color:#1A8AD6;"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+    </ion-header>
+
+    <ion-content padding class="normalize-ion">
+
+        <h3 class="heading">Update Profile</h3>
+
+      <ion-list>
+      
+        <ion-item>
+          <ion-label fixed>Contact Name</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text"  [(ngModel)]="userData.name"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+            <ion-label fixed>Company Name</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text"  [(ngModel)]="userData.company_name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label fixed>Telephone Number</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text"  [(ngModel)]="userData.contact_no"></ion-input>
+      </ion-item>
+      
+        <ion-item>
+          <ion-label fixed>Email</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text"  [(ngModel)]="userData.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Region</ion-label>
+          </ion-item>
+      <ion-item class="mb-10"> 
+              <ion-select [(ngModel)]="userData.region_name" multiple="false" interface="action-sheet">
+                <ion-option *ngFor="let item of dataSet; let msgIndex = index" value="{{item.region_id}}">{{item.region_name}}</ion-option>
+              </ion-select>    
+      </ion-item>
+      
+      
+ <button ion-button block color="primary" (click)="ProfileUpdate()" class="bottom-main-btn btn-border mb-10">Update</button>
+ <button ion-button block color="primary" (click)="logout()" class="bottom-main-btn bg-secondary btn-border">Logout</button>
+
+
+      </ion-list>
+      </ion-content>

@@ -1,0 +1,62 @@
+ 
+
+  <ion-header no-border>
+      <ion-navbar hideBackButton="true"> <!-- If you don't need back here -->
+        <img ion-right src="assets/imgs/bananalogo.png" class="navbarLogo" />
+        <ion-buttons end>
+            <button class="hdx" ion-button icon-only (click)="backToWelcome()">
+                <ion-icon name="home" style="color:#1A8AD6;"></ion-icon>
+            </button>
+        </ion-buttons>
+      </ion-navbar>
+      </ion-header>
+
+
+
+
+<ion-content class="home-page1">
+
+      <ion-card (click)="pushPage('request')">
+        <ion-card-content>
+          <img ion-right src="assets/icon/icon1.png" class="iocnlogo" />
+          <span class="request-list-text"> Submit A Request</span>
+        </ion-card-content>
+      </ion-card>
+      <ion-card (click)="pushPage('call')">
+          <ion-card-content >
+              <img ion-right src="assets/icon/icon2.png" class="iocnlogo" />
+             <span class="request-list-text"> Call In A Request</span>
+          </ion-card-content>
+      </ion-card>
+      <ion-card (click)="pushPage('list')">
+          <ion-card-content>
+              <img ion-right src="assets/icon/icon3.png" class="iocnlogo" />
+            <span class="request-list-text" style="color:green"> View Past Request</span>
+          </ion-card-content>
+      </ion-card>
+      
+      <ion-card>
+          <ion-card-content>
+              <img ion-right src="assets/icon/icon4.png" class="iocnlogo" />
+            <span class="request-list-text"> <a href="https://perfectiongroup.com/" class="button button-outline button-positive">Visit Our Website</a>
+            </span>
+             </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-content>
+              <img ion-right src="assets/icon/icon5.png" class="iocnlogo" />
+            <span class="request-list-text"> <a href="http://reports.perfectwaresolutions.com/webviewfs.nsf" class="button button-outline button-positive">WebViewing</a>
+            </span>
+          </ion-card-content>
+      </ion-card>
+      <ion-card (click)="pushPage('about')" class="no-border">
+          <ion-card-content>
+            <img ion-right src="assets/icon/icon6.png" class="iocnlogo" />
+            <span class="request-list-text ed5" style="color:#57585A;"> Edit Your Profile</span>
+          </ion-card-content>
+      </ion-card>
+
+
+<p class="home-footer-copyright">©2019 Perfection Group</p>
+
+</ion-content>

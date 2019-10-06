@@ -1,0 +1,51 @@
+<ion-header no-border>
+    <ion-navbar hideBackButton="true"> <!-- If you don't need back here -->
+      <img ion-right src="assets/imgs/bananalogo.png" class="navbarLogo" />
+      <ion-buttons end>
+          <button ion-button icon-only (click)="backToWelcome()">
+              <ion-icon name="home" style="color:#1A8AD6;"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+    </ion-header>
+    
+<ion-content padding class="normalize-ion">
+  <h3 class="heading">Submit Request</h3>
+
+    <p style="color:red;font-weight: 600;margin-top: 0;margin-bottom: 0;"  *ngIf="close">Service requests received outside of business hours
+        will be processed on the next business day.</p>
+
+
+  <ion-row>
+      <ion-col class="mb-10" width-100>
+          <ion-item>
+              <ion-label class="small-label-text" fixed>Location of Service Request</ion-label>
+          
+          </ion-item>
+
+          <ion-item>
+        <ion-select [(ngModel)]="userPostData.ulocation" multiple="false"  placeholder="Choose Your Location" interface="action-sheet">             
+                <ion-option *ngFor="let item of dataSet; let msgIndex = index">{{item.name}}</ion-option>
+              </ion-select>
+          </ion-item>
+      </ion-col>
+  </ion-row>
+  <p class="add-location-btn" name="add-circle" style="color:#1A8AD6;" (click)="location()">  Add New Location</p>
+
+
+  <ion-item> 
+      <ion-label class="small-label-text" fixed>Description of Issue</ion-label>
+    </ion-item>
+
+  <ion-item id="udpateBox">
+  
+      <ion-item>
+    <ion-input type="text" [(ngModel)]="userPostData.feed"></ion-input>
+      </ion-item>
+    <ion-row>
+        <button class="bottom-main-btn" ion-button color="primary" (click)="nextpage()" style="width:100%">Submit Request</button>
+  
+      <button class="bottom-main-btn" ion-button color="primary" (click)="backToWelcome1()" style="width:100%">Submit wel</button>
+    </ion-row>
+  </ion-item>
+</ion-content>

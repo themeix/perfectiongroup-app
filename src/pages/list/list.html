@@ -1,0 +1,50 @@
+<ion-header no-border>
+    <ion-navbar hideBackButton="true"> <!-- If you don't need back here -->
+      <img ion-right src="assets/imgs/bananalogo.png" class="navbarLogo" />
+      <ion-buttons end>
+          <button ion-button icon-only (click)="backToWelcome()">
+              <ion-icon name="home" style="color:#1A8AD6;"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+    </ion-header>
+
+    <ion-content padding class="normalize-ion">
+    <h3 class="heading">View Past Requests</h3>
+
+<ion-card *ngIf="nodata"  class="past-req-container">
+      <ion-item>
+        No Request Found!
+      </ion-item>
+  </ion-card>
+  
+
+  <ion-card class="past-req-container" *ngFor="let item of dataSet; let msgIndex = index">
+    <ion-item>
+      <img ion-right src="assets/icon/icon8.png" class="iocnlogo" />
+      <ion-card-content class="past-request-block">
+        <span >Request Type: {{item.type}}</span>
+        <br>
+        <span>Date: {{item.date}}</span><br>
+        <span>Time: {{item.time}}</span><br>
+        <span>Location: {{item.ulocation}}</span><br>
+        <span>Details: {{item.feed}}</span>
+      </ion-card-content>
+
+      
+    </ion-item>
+
+    <button ion-button color="primary" (click)="resubmit(item)" style="width: 92%;margin: 10px;">Resubmit</button>
+  </ion-card>
+
+  <ion-card *ngIf="noRecords">
+    <ion-item>
+      No Records
+    </ion-item>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())" *ngIf="!noRecords">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

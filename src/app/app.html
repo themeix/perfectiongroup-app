@@ -1,0 +1,9 @@
+<!--<ion-nav [root]="rootPage"></ion-nav>-->
+
+<ion-split-pane [when]="splitPane.getSplitPane()">
+  <!--  our side menu  -->
+
+  <!-- the main content -->
+  <ion-nav [root]="rootPage" main #content></ion-nav>
+</ion-split-pane>
+

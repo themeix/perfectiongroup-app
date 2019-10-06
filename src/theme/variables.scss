@@ -1,0 +1,236 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+@import "ionic.globals";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+$colors: ( primary :#168ECD, secondary : #677077, lightprimary : #B5B5B7, light : #f4f4f4, dark : #222, energy : #f2b632);
+$toolbar-background: color($colors, primary);
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+@import "ionic.ionicons";
+// Fonts
+// --------------------------------------------------
+//@import "roboto";
+//@import "noto-sans";
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/opensans/400/opensans-regular-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url('../assets/fonts/opensans/600/opensans-semibold-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../assets/fonts/opensans/700/opensans-bold-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: extra-bold;
+  font-weight: 900;
+  src: url('../assets/fonts/opensans/900/opensans-extrabold-webfont.ttf');
+}
+
+$font-family-base: "Open Sans";
+body {
+  font-family: "Open Sans" !important;
+  font-weight: 400 !important;
+}
+
+h1,
+h2,
+button,
+p {
+  font-family: "Open Sans" !important;
+}
+
+@import "../assets/scss/font-awesome/font-awesome";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../assets/fonts/font-awesome/fontawesome-webfont.eot');
+  src: url('../assets/fonts/font-awesome/fontawesome-webfont.eot') format('embedded-opentype'),
+  url('../assets/fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'),
+  url('../assets/fonts/font-awesome/fontawesome-webfont.woff}') format('woff'),
+  url('../assets/fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'),
+  url('../assets/fonts/font-awesome/fontawesome-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input {
+  border:solid 1px #333333 !important;
+  padding:4px !important;
+}
+.toolbar-background-md {
+  border-color: #b2b2b2;
+  background: white !important;
+}
+
+.alert-wrapper {
+  overflow: auto;
+}
+
+.heading  { color ::#168ECD}
+.warning-text {background-color: red;padding: 10px;color: white;}
+
+.navbarLogo {
+  height: 50% !important;
+  float: left;
+  margin-left: 10px;
+  width: 67%;
+}
+
+h3.heading {
+  font-weight: 700!important;
+  padding-bottom: 10px!important;
+  font-size: 24px!important;
+  font-family: Open Sans, sans-serif!important;
+}
+.toolbar-background-ios {
+  background: #fff!important;
+}
+.card-ios {
+  box-shadow: none;
+  margin: 0;
+}
+.no-border {border:none!important}
+.ion-card {
+  box-shadow: none!important;
+}
+
+
+
+.normalize-ion .col {
+  padding: 0;
+}
+
+.normalize-ion .ion-item {
+  padding: 0!important;
+  margin: 0!important;
+  width: 100%!important;
+
+}
+
+.normalize-ion .item-ios {
+  padding: 0!important;
+}
+
+.normalize-ion .item-inner {
+  border: none!important;
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.normalize-ion .label-ios {
+  margin: 0;
+}
+
+.normalize-ion .button-ios {
+  margin: 0;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.normalize-ion .ion-ios-add-circle {
+  padding: 10px;
+  background: #1A8AD6;
+  color: #fff!important;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+  font-family: Open Sans, sans-serif;
+}
+.small-label-text {
+  font-size: 13px;
+  color: #7d7d7d;
+  font-weight: 600;
+}
+.mb-10 {
+  margin-bottom:10px!important;
+}
+.add-location-btn {
+  padding: 10px!important;
+  width: 100%!important;
+  text-align: center;
+  background-color: #1A8AD6;
+  color: #fff !important;
+  border-radius: 5px;
+  margin: 0;
+  font-weight: 700!important;
+  font-size: 18px;
+}
+.bottom-main-btn {
+  font-size: 22px!important;
+  font-weight: 800!important;
+  padding: 12px 10px!important;
+  height: 50px!important;
+  border-radius: 5px!important;
+  background: #078BD5!important;
+  text-transform: inherit!important;
+}
+.bg-secondary {
+  background:#949494 !important}
+  .label {
+    margin-bottom: 0!important;
+    margin-top: 5px!important;
+}
+$text-input-highlight-color-valid:transparent;
+$text-input-highlight-color-invalid:transparent;
+$text-input-md-highlight-color-invalid: transparent;
+$text-input-md-highlight-color-valid: transparent;
+$text-input-md-show-invalid-highlight: transparent;
+$text-input-md-highlight-color: transparent;
+$text-input-md-show-valid-highlight: transparent;
+.my-input.ng-invalid{
+  border-bottom-color: transparent;
+}
+.my-input.ng-valid{
+  border-bottom-color: transparent;
+}
+.normalize-ion .label {
+  margin-right: 0!important;
+}
+
+
+

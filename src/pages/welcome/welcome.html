@@ -1,0 +1,30 @@
+<ion-content padding id="welcome1">
+
+<img src="assets/imgs/logo2.png" class="logo"/>
+
+
+<ion-list>
+
+    <ion-item>
+        <ion-label fixed>Email</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" value="" [(ngModel)]="userData.username"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Password</ion-label>
+       
+    </ion-item>
+    <ion-item>
+
+      <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+    </ion-item>
+    <p (click)="forgot()"  style="    margin: 0;    text-align: right;    font-weight: 700;    color: #098bd5;">SEND ME MY PASSWORD</p>
+    <button ion-button block color="primary" (click)="dologin()" class="login-btn btn-border bottom-main-btn">Sign In</button>
+  
+  </ion-list>
+  <hr size="0">
+  <span class="login-text">If you don't have any account, use the button below to create one</span>
+
+<button ion-button block (click)="signup()" class="btn-border marginTop reg-btn bottom-main-btn">Register</button>
+</ion-content>
